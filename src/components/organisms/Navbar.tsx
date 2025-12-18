@@ -117,7 +117,7 @@ export default function Navbar({ currentPath = '' }: { currentPath?: string }) {
                                         onMouseEnter={handleMouseEnter}
                                         onMouseLeave={handleMouseLeave}
                                     >
-                                        <button aria-expanded={isMegaMenuOpen} className={`${activeClass} hover:text-action font-medium transition-colors flex items-center h-full border-b-2 hover:border-action cursor-default`}>
+                                        <button aria-expanded={isMegaMenuOpen} className={`${activeClass} hover:text-action font-medium transition-colors flex items-center h-full border-b-2 hover:border-action cursor-default px-4`}>
                                             {item.name}
                                             <span className="ml-1 text-xs" aria-hidden="true">▼</span>
                                         </button>
@@ -125,7 +125,7 @@ export default function Navbar({ currentPath = '' }: { currentPath?: string }) {
                                         {/* MEGA MENU */}
                                         {isMegaMenuOpen && (
                                             <div
-                                                className="absolute top-16 left-1/2 transform -translate-x-1/2 w-[900px] bg-white shadow-2xl rounded-b-xl border-t-4 border-action animate-fade-in-down overflow-hidden"
+                                                className="absolute top-full left-1/2 transform -translate-x-1/2 w-[900px] bg-white shadow-2xl rounded-b-xl border-t-4 border-action animate-fade-in-down overflow-hidden"
                                                 onMouseEnter={handleMouseEnter}
                                                 onMouseLeave={handleMouseLeave}
                                             >
@@ -175,7 +175,7 @@ export default function Navbar({ currentPath = '' }: { currentPath?: string }) {
                                     <a
                                         key={index}
                                         href={item.href}
-                                        className={`${activeClass} hover:text-action font-medium transition-colors border-b-2 hover:border-action h-full flex items-center`}
+                                        className={`${activeClass} hover:text-action font-medium transition-colors border-b-2 hover:border-action h-full flex items-center px-4`}
                                     >
                                         {item.name}
                                     </a>
