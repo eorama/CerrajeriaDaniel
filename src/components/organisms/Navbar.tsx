@@ -10,8 +10,8 @@ interface MenuItem {
 }
 
 const navStructure: MenuItem[] = [
-    { name: 'Inicio', href: '/' },
-    { name: 'Quienes Somos', href: '/quienes-somos' },
+    { name: 'Inicio', href: '/CerrajeriaDaniel/' },
+    { name: 'Quienes Somos', href: '/CerrajeriaDaniel/quienes-somos' },
     {
         name: 'Servicios',
         noLink: true,
@@ -21,10 +21,10 @@ const navStructure: MenuItem[] = [
                 // Placeholder image for Aperturas
                 href: 'https://placehold.co/120x120/0c132e/dcac00?text=Aperturas',
                 children: [
-                    { name: 'Apertura de puertas Tenerife', href: '/servicios/apertura-de-puertas-tenerife' },
-                    { name: 'Apertura de coches Tenerife', href: '/servicios/apertura-de-coches-tenerife' },
-                    { name: 'Apertura de cajas fuertes Tenerife', href: '/servicios/apertura-de-cajas-fuertes-tenerife' },
-                    { name: 'Amaestramiento de cerraduras Tenerife', href: '/servicios/amaestramiento-de-cerraduras-tenerife' },
+                    { name: 'Apertura de puertas Tenerife', href: '/CerrajeriaDaniel/servicios/apertura-de-puertas-tenerife' },
+                    { name: 'Apertura de coches Tenerife', href: '/CerrajeriaDaniel/servicios/apertura-de-coches-tenerife' },
+                    { name: 'Apertura de cajas fuertes Tenerife', href: '/CerrajeriaDaniel/servicios/apertura-de-cajas-fuertes-tenerife' },
+                    { name: 'Amaestramiento de cerraduras Tenerife', href: '/CerrajeriaDaniel/servicios/amaestramiento-de-cerraduras-tenerife' },
                 ]
             },
             {
@@ -32,9 +32,9 @@ const navStructure: MenuItem[] = [
                 // Placeholder image for Cerraduras
                 href: 'https://placehold.co/120x120/0c132e/dcac00?text=Cerraduras',
                 children: [
-                    { name: 'Cambio y reparación de cerraduras Tenerife', href: '/servicios/cambio-y-reparacion-de-cerraduras-tenerife' },
-                    { name: 'Reparación de cerraduras electrónicas Tenerife', href: '/servicios/reparacion-de-cerraduras-electronicas-tenerife' },
-                    { name: 'Instalación de cerrojos Tenerife', href: '/servicios/instalacion-de-cerrojos-tenerife' },
+                    { name: 'Cambio y reparación de cerraduras Tenerife', href: '/CerrajeriaDaniel/servicios/cambio-y-reparacion-de-cerraduras-tenerife' },
+                    { name: 'Reparación de cerraduras electrónicas Tenerife', href: '/CerrajeriaDaniel/servicios/reparacion-de-cerraduras-electronicas-tenerife' },
+                    { name: 'Instalación de cerrojos Tenerife', href: '/CerrajeriaDaniel/servicios/instalacion-de-cerrojos-tenerife' },
                 ]
             },
             {
@@ -42,16 +42,16 @@ const navStructure: MenuItem[] = [
                 // Placeholder image for Llaves
                 href: 'https://placehold.co/120x120/0c132e/dcac00?text=Llaves',
                 children: [
-                    { name: 'Duplicado de llaves Tenerife', href: '/servicios/duplicado-de-llaves-tenerife' },
-                    { name: 'Copia de llaves de coche Tenerife', href: '/servicios/copia-de-llaves-de-coche-tenerife' },
-                    { name: 'Reparación de mandos de coche Tenerife', href: '/servicios/reparacion-de-mandos-de-coche-tenerife' },
-                    { name: 'Duplicado de mandos de garaje Tenerife', href: '/servicios/duplicado-de-mandos-de-garaje-tenerife' },
+                    { name: 'Duplicado de llaves Tenerife', href: '/CerrajeriaDaniel/servicios/duplicado-de-llaves-tenerife' },
+                    { name: 'Copia de llaves de coche Tenerife', href: '/CerrajeriaDaniel/servicios/copia-de-llaves-de-coche-tenerife' },
+                    { name: 'Reparación de mandos de coche Tenerife', href: '/CerrajeriaDaniel/servicios/reparacion-de-mandos-de-coche-tenerife' },
+                    { name: 'Duplicado de mandos de garaje Tenerife', href: '/CerrajeriaDaniel/servicios/duplicado-de-mandos-de-garaje-tenerife' },
                 ]
             }
         ]
     },
-    { name: 'Zonas de Servicio', href: '/#zonas' },
-    { name: 'Contacto', href: '/contacto' },
+    { name: 'Zonas de Servicio', href: '/CerrajeriaDaniel/#zonas' },
+    { name: 'Contacto', href: '/CerrajeriaDaniel/contacto' },
 ];
 
 export default function Navbar({ currentPath = '' }: { currentPath?: string }) {
@@ -93,8 +93,8 @@ export default function Navbar({ currentPath = '' }: { currentPath?: string }) {
             <div className="container mx-auto px-4">
                 <div className="flex justify-between h-20 items-center">
                     <div className="flex-shrink-0 flex items-center">
-                        <a href="/" className="hover:opacity-90 transition-opacity" aria-label="Ir al inicio">
-                            <img src="/images/logo.png" alt="Cerrajero Tenerife 24h" width="420" height="109" className="h-14 w-auto object-contain" />
+                        <a href="/CerrajeriaDaniel/" className="hover:opacity-90 transition-opacity" aria-label="Ir al inicio">
+                            <img src="/CerrajeriaDaniel/images/logo.png" alt="Cerrajero Tenerife 24h" width="420" height="109" className="h-14 w-auto object-contain" />
                         </a>
                     </div>
 
