@@ -28,7 +28,7 @@ Nuestro enfoque se centra en comprender las necesidades específicas de cada pro
 *   **Optimización de Conversiones**: No nos conformamos con visitas; trabajamos para convertir visitantes en clientes fieles.
 *   **Automatización de Marketing**: Implementamos sistemas que trabajan por ti 24/7, optimizando procesos y mejorando la atención al cliente.
 
-**Panoramas Digital Marketing** combina creatividad, tecnología y estrategia para elevar tu presencia digital y hacer crecer tu negocio en un mercado competitivo.
+**Panoramas Digital Marketing** combina creatividad, tecnología y estrategia para elevar tu presencia digital y hacer crecer tu negocio en el mercado competitivo actual.
 
 ---
 *Transformando marcas y conquistando audiencias*
