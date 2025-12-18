@@ -1,0 +1,39 @@
+---
+import ReviewsCarousel from './ReviewsCarousel';
+import Icon from '../atoms/Icon';
+---
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-heading">Que dicen los clientes de nosotros</h2>
+      <p class="text-lg text-gray-600 max-w-4xl mx-auto mb-8 leading-relaxed">
+        En Cerrajero Tenerife 24 h urgente, la satisfacción de nuestros clientes es lo más importante. Cada opinión que ves aquí es real y refleja el compromiso que tenemos con ofrecer un servicio rápido, profesional y honesto.
+      </p>
+      <p class="text-lg text-gray-600 max-w-4xl mx-auto mb-8 leading-relaxed">
+        Nuestros clientes destacan la rapidez en la respuesta, la eficacia en las aperturas y, sobre todo, el trato cercano y de confianza. Sabemos que cuando alguien llama a un cerrajero de urgencia, lo último que quiere son complicaciones. Por eso nos esforzamos en llegar en minutos, resolver el problema sin daños y explicar todo con claridad antes de empezar.
+      </p>
+      <p class="text-lg text-gray-600 max-w-4xl mx-auto mb-8 leading-relaxed">
+        Estas reseñas no solo son una muestra de nuestro trabajo, sino también una garantía para ti. Si estás buscando un cerrajero urgente en Tenerife, puedes tener la tranquilidad de que estás eligiendo a un equipo con experiencia, buena reputación y precios transparentes.
+      </p>
+      <p class="text-lg text-gray-600 max-w-4xl mx-auto mb-8 leading-relaxed">
+        Gracias a todos los clientes que han confiado en nosotros y han dedicado unos minutos a compartir su experiencia. Tu opinión nos ayuda a seguir mejorando.
+      </p>
+      
+      <div class="inline-flex items-center bg-gray-50 px-6 py-3 rounded-full border border-gray-100 shadow-sm">
+        <span class="text-3xl font-bold text-primary mr-2">4.7</span>
+        <div class="flex text-yellow-400 mr-2">
+           {[1,2,3,4,5].map(i => <Icon name="star" size={24} className="fill-current" />)}
+        </div>
+        <div class="text-left text-xs text-gray-500 leading-tight">
+          <span class="block font-bold text-gray-700">Google Reviews</span>
+          Basado en 79 reseñas
+        </div>
+      </div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto">
+        <ReviewsCarousel client:visible />
+    </div>
+  </div>
+</section>

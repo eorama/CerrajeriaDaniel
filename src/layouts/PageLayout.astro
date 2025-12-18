@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const { title } = Astro.props;
+---
+
+<Layout title={`${title} - Cerrajero Tenerife 24h`}>
+  <main class="pt-20">
+    <section class="bg-primary text-white py-16">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold mb-4 font-heading">{title}</h1>
+      </div>
+    </section>
+    
+    <section class="py-12">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <div class="bg-gray-100 p-8 rounded-lg mt-8 text-center">
+            <h3 class="text-2xl font-bold text-primary mb-4">Contenido pendiente</h3>
+            <p>El contenido detallado para esta página estará disponible pronto.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

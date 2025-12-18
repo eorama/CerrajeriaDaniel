@@ -1,0 +1,173 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/atoms/Icon';
+
+const features = [
+  {
+    title: "Disponibilidad total",
+    description: "Trabajamos 24 horas al día, 7 días a la semana, incluidos domingos y festivos."
+  },
+  {
+    title: "Rapidez garantizada",
+    description: "Sabemos que una emergencia no puede esperar. Llegamos en pocos minutos a donde estés."
+  },
+  {
+    title: "Profesionales cualificados",
+    description: "Contamos con cerrajeros formados, con herramientas modernas y técnicas actualizadas."
+  },
+  {
+    title: "Precios claros y justos",
+    description: "Ofrecemos un servicio de calidad sin sorpresas en la factura. Te damos el precio antes de empezar."
+  }
+];
+---
+
+<Layout title="Quienes Somos - Cerrajero Tenerife 24h">
+  <main>
+    <!-- Hero Section -->
+    <section class="relative bg-primary text-white py-24 lg:py-32 overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="https://placehold.co/1920x600/080c1b/1a2240?text=Cerrajeria+Profesional" 
+                alt="Fondo Cerrajería" 
+                class="w-full h-full object-cover opacity-40 mix-blend-overlay"
+            />
+            <div class="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-primary/90"></div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            {/* Breadcrumb */}
+            <div class="flex justify-center items-center gap-2 text-sm font-medium text-gray-400 mb-6 uppercase tracking-wider animate-fade-in">
+                <a href="/" class="hover:text-action transition-colors">Inicio</a>
+                <span class="text-gray-600">/</span>
+                <span class="text-action">Quienes Somos</span>
+            </div>
+
+            <h1 class="text-5xl lg:text-6xl font-black mb-6 font-heading tracking-tight animate-fade-in-down">
+                Conoce a <span class="text-transparent bg-clip-text bg-gradient-to-r from-action to-yellow-200">Cerrajería Daniel</span>
+            </h1>
+            
+            <p class="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light animate-fade-in-up">
+                Más de una década brindando seguridad, confianza y soluciones rápidas a las familias y empresas de Tenerife.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Intro / Mission -->
+    <section class="py-16 lg:py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-action uppercase tracking-widest mb-3">Cerrajería Daniel</h2>
+                <h3 class="text-3xl font-bold text-gray-900 mb-6 font-heading">Tu seguridad es nuestra prioridad</h3>
+                <p class="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto">
+                    Sabemos que los problemas con cerraduras no avisan. Por eso ofrecemos un servicio urgente las 24 horas, en toda la isla de Tenerife. Nuestra misión es sencilla: soluciones rápidas, seguras y profesionales, sin importar la hora ni el lugar.
+                </p>
+            </div>
+
+            <!-- Experiencia y Profesionalidad -->
+            <div class="flex flex-col lg:flex-row items-center gap-12 mb-20">
+                <div class="lg:w-1/2">
+                    <img 
+                        src="https://placehold.co/600x400/0c132e/dcac00?text=Experiencia" 
+                        alt="Cerrajero trabajando" 
+                        class="rounded-lg shadow-xl w-full"
+                    />
+                </div>
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 font-heading">Experiencia y Profesionalidad</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Nuestra se forja sobre tres generaciones dedicadas al oficio, comenzando hace más de una década, con un pequeño taller en Santa Cruz de Tenerife. Nuestro fundador, cerrajero titulado con amplia experiencia en sistemas de seguridad, decidió crear un servicio que uniera calidad, rapidez y atención personalizada. Desde entonces, hemos crecido gracias a la confianza de hogares, comercios y comunidades que valoran nuestra transparencia y profesionalidad.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Hoy contamos con un equipo de cerrajeros certificados y en constante formación, preparados para trabajar con cerraduras tradicionales, sistemas electrónicos, cajas fuertes biométricas y controles de acceso modernos. Cada vehículo está equipado para ofrecer soluciones in situ, sin esperas ni desplazamientos adicionales.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Grid (Availability, Human Side, Transparency, Future) -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                
+                {/* Availability */}
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="text-action mb-4">
+                        <Icon name="phone" size={40} />
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">La importancia de estar disponibles</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Ser cerrajero de urgencia no es solo abrir puertas. Es acompañar y ayudar en situaciones críticas: bebés o adultos atrapados, personas bloqueadas fuera de casa en plena noche, o familias tras un robo. Muchas veces, nuestra labor combina lo técnico con lo humano: tranquilizamos, asesoramos y devolvemos un poco de calma en momentos de estrés.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed text-sm bg-gray-50 p-4 rounded-lg border-l-4 border-primary">
+                        Sabemos que nuestras tarifas, que oscilan entre 80 € y 140 € según la hora y la complejidad, pueden generar debate. Pero detrás de cada intervención está disponibilidad inmediata, desplazamiento rápido, herramientas especializadas y responsabilidad profesional, muchas veces en plena madrugada.
+                    </p>
+                </div>
+
+                {/* Transparency */}
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="text-action mb-4">
+                         <Icon name="shield" size={40} />
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Transparencia y confianza</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        En Cerrajería Daniel, la confianza se construye desde el primer contacto. Ofrecemos presupuestos claros, sin letra pequeña ni recargos ocultos, y garantía de seis meses en repuestos y mano de obra. Nuestro objetivo es que sepas siempre qué haremos, en qué tiempo y a qué coste, manteniéndote informado en todo momento.
+                    </p>
+                </div>
+
+                {/* More than urgencies */}
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                     <div class="text-action mb-4">
+                         <Icon name="lock" size={40} />
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Más que urgencias</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Además de la atención inmediata, trabajamos con comunidades de vecinos, promotoras y empresas de seguridad, realizando mantenimientos periódicos, revisiones preventivas e instalaciones integrales de sistemas de seguridad. Nos adaptamos a las normativas y coordinamos con otros profesionales para ofrecer un servicio completo y seguro.
+                    </p>
+                </div>
+
+                 {/* Future */}
+                 <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                     <div class="text-action mb-4">
+                         <Icon name="key" size={40} />
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Mirando al futuro</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Nuestro compromiso sigue siendo el mismo: rapidez, honestidad y cercanía. Queremos seguir siendo la referencia en cerrajería en Tenerife, incorporando nuevas tecnologías como apertura remota y domótica, siempre protegiendo tu hogar, negocio y tranquilidad.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Summary / Why Us -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12">
+                 <h2 class="text-3xl font-bold text-gray-900 mb-6 font-heading">Tu cerrajero de confianza en Tenerife</h2>
+                 <p class="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                    Somos especialistas en servicios de cerrajería en toda la isla. Nos dedicamos a ofrecer soluciones rápidas, seguras y eficaces en cualquier tipo de emergencia o necesidad relacionada con cerraduras, puertas, cajas fuertes y sistemas de seguridad. Si buscas un cerrajero en Tenerife, profesional, disponible 24 horas y con precios claros, estás en el lugar correcto.
+                 </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                {features.map(feature => (
+                    <div class="flex items-start p-4 hover:bg-gray-50 rounded-lg transition-colors">
+                        <span class="flex-shrink-0 bg-primary text-white p-3 rounded-full mr-4 shadow-md">
+                            <Icon name="check" size={24} />
+                        </span>
+                        <div>
+                            <h5 class="font-bold text-gray-900 text-lg mb-2">{feature.title}</h5>
+                            <p class="text-gray-600 leading-relaxed">{feature.description}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+  </main>
+</Layout>

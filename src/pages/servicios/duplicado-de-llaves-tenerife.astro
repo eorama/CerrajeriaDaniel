@@ -1,0 +1,117 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ContactForm from '../../components/organisms/ContactForm';
+import Icon from '../../components/atoms/Icon';
+---
+
+<Layout title="Duplicado de llaves Tenerife - Servicio Rápido y a Domicilio">
+  <main>
+    <!-- Hero Section -->
+    <section class="relative bg-primary text-white py-20 lg:py-28 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+             <img 
+                src="https://placehold.co/1920x800/080c1b/1a2240?text=Duplicado+de+llaves" 
+                alt="Duplicado de llaves en Tenerife" 
+                class="w-full h-full object-cover opacity-40 mix-blend-overlay"
+            />
+            <div class="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-primary/90"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10 text-center">
+             <div class="flex justify-center items-center gap-2 text-sm font-medium text-gray-400 mb-6 uppercase tracking-wider animate-fade-in">
+                <a href="/" class="hover:text-action transition-colors">Inicio</a>
+                <span class="text-gray-600">/</span>
+                <span class="text-gray-400">Servicios</span>
+                <span class="text-gray-600">/</span>
+                <span class="text-action">Duplicado de llaves</span>
+            </div>
+            
+            <h1 class="text-4xl lg:text-5xl font-black mb-6 font-heading tracking-tight animate-fade-in-down">
+                Duplicado de llaves Tenerife
+            </h1>
+             <p class="text-xl text-gray-300 max-w-3xl mx-auto font-light leading-relaxed mb-10 animate-fade-in-up">
+                ¿Perdiste tus llaves o necesitas un duplicado rápido? Hacemos copias al momento y sin esperas en Tenerife para que vuelvas a tu día sin problemas.
+            </p>
+            
+            <div class="animate-fade-in-up" style="animation-delay: 0.2s">
+                <a href="tel:+34922076289" class="inline-flex items-center bg-action text-white font-bold py-4 px-8 rounded-full shadow-lg hover:bg-opacity-90 transition-transform transform hover:-translate-y-1">
+                    <Icon name="phone" size={24} className="mr-2" />
+                    Llamar ahora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            
+            <!-- Copias rápidas y seguras -->
+            <div class="flex flex-col md:flex-row gap-12 items-start mb-20">
+                <div class="md:w-1/3">
+                    <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100 text-primary">
+                        <Icon name="key" size={64} className="mb-4 text-action" />
+                        <h2 class="text-2xl font-bold font-heading">Copias rápidas y seguras</h2>
+                    </div>
+                </div>
+                <div class="md:w-2/3 space-y-6 text-lg text-gray-600 leading-relaxed">
+                    <p>
+                        Realizamos duplicados de llaves de manera inmediata, sin complicaciones. Trae tu llave o llámanos y nuestro equipo se encargará de que tengas tu copia en minutos.
+                    </p>
+                    <p>
+                        Usamos tecnología moderna para garantizar que tu llave funcione perfectamente desde el primer intento. Olvídate de los problemas por llaves que no encajan o fallan. Nuestro objetivo es que recuperes la tranquilidad y seguridad de tu hogar o negocio sin demoras.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Servicio urgente a domicilio en Tenerife -->
+             <div class="flex flex-col md:flex-row-reverse gap-12 items-start mb-20">
+                <div class="md:w-1/3">
+                     <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 text-primary">
+                        <Icon name="truck" size={64} className="mb-4 text-action" />
+                        <h2 class="text-2xl font-bold font-heading">Servicio urgente a domicilio en Tenerife</h2>
+                    </div>
+                </div>
+                <div class="md:w-2/3 space-y-6 text-lg text-gray-600 leading-relaxed">
+                    <p>
+                        Si estás bloqueado fuera de tu casa o negocio, podemos desplazarnos hasta tu ubicación en Tenerife. Llegamos rápido y llevamos todo lo necesario para duplicar tus llaves allí mismo.
+                    </p>
+                    <p>
+                        No importa si es día o noche: entendemos que estas situaciones no esperan, por eso nuestro servicio es inmediato. Tu comodidad y seguridad son nuestra prioridad.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Compatibilidad con todo tipo de llaves -->
+            <div class="bg-gradient-to-br from-primary to-gray-900 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden mb-20">
+                <div class="absolute top-0 right-0 opacity-10 transform translate-x-1/4 -translate-y-1/4">
+                    <Icon name="check" size={200} />
+                </div>
+                <div class="relative z-10">
+                    <h2 class="text-3xl font-bold mb-6 font-heading text-action">Compatibilidad con todo tipo de llaves</h2>
+                    <div class="space-y-6 text-lg text-gray-300 leading-relaxed">
+                        <p>
+                           Duplicamos llaves de casas, oficinas, garajes e incluso llaves especiales como llaves de seguridad o llaves de coches.
+                        </p>
+                        <p>
+                             Nuestro personal está capacitado para manejar cualquier modelo y marca, garantizando que tu duplicado funcione sin problemas.
+                        </p>
+                        <p>
+                            Además, te damos asesoramiento sobre cómo cuidar tus llaves y evitar futuros problemas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form Section -->
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold text-center mb-8 font-heading text-gray-900">Solicitar Presupuesto</h3>
+                <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
+                    <ContactForm client:visible />
+                </div>
+            </div>
+
+        </div>
+    </section>
+  </main>
+</Layout>

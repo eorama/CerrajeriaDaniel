@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/atoms/Icon';
+---
+
+<Layout title="Solicitud Recibida - Cerrajero Tenerife 24h">
+  <main class="min-h-[80vh] flex items-center justify-center bg-gray-50 py-20">
+    <div class="container mx-auto px-4 max-w-2xl text-center">
+      <div class="bg-white p-10 rounded-3xl shadow-xl border-t-8 border-action">
+        <div class="w-24 h-24 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+          <Icon name="check" size={48} />
+        </div>
+        
+        <h1 class="text-3xl md:text-4xl font-bold text-primary mb-6 font-heading">
+          ¡Solicitud de Presupuesto Recibida!
+        </h1>
+        
+        <div class="space-y-4 text-lg text-gray-600 mb-8">
+            <p>
+                Muchas gracias por confiar en nosotros. Hemos recibido correctamente tu solicitud de presupuesto.
+            </p>
+            <p>
+                Nuestro equipo ya está revisando tu caso y <strong>te llamaremos o enviaremos un mensaje al número que nos has proporcionado</strong> lo antes posible para darte una solución.
+            </p>
+            <p class="text-sm text-gray-400 mt-6">
+                Si es una urgencia, recuerda que puedes llamarnos directamente al <a href="tel:+34922076289" class="text-action font-bold hover:underline">922 07 62 89</a>.
+            </p>
+        </div>
+
+        <a 
+            href="/" 
+            class="inline-flex items-center justify-center bg-primary text-white font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-transform transform hover:-translate-y-1 shadow-lg"
+        >
+          Volver al Inicio
+        </a>
+      </div>
+    </div>
+  </main>
+</Layout>

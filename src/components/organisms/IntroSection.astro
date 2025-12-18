@@ -1,0 +1,105 @@
+---
+import Icon from '../atoms/Icon';
+import ContactForm from './ContactForm';
+
+const features = [
+  {
+    title: "Disponibilidad total",
+    description: "Trabajamos 24 horas al día, 7 días a la semana, incluidos domingos y festivos."
+  },
+  {
+    title: "Rapidez garantizada",
+    description: "Sabemos que una emergencia no puede esperar. Llegamos en pocos minutos a donde estés."
+  },
+  {
+    title: "Profesionales cualificados",
+    description: "Contamos con cerrajeros formados, con herramientas modernas y técnicas actualizadas."
+  },
+  {
+    title: "Precios claros y justos",
+    description: "Ofrecemos un servicio de calidad sin sorpresas en la factura. Te damos el precio antes de empezar."
+  }
+];
+
+const stats = [
+  { number: "15+", label: "Años en servicio" },
+  { number: "500+", label: "Clientes satisfechos" }
+];
+---
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col lg:flex-row gap-16 items-start">
+      
+      {/* Content Side */}
+      <div class="lg:w-1/2">
+        <h2 class="text-sm font-bold text-action uppercase tracking-widest mb-2">Cobertura total en la isla</h2>
+        <h3 class="text-3xl lg:text-4xl font-black text-gray-900 mb-6 font-heading leading-tight">
+          Servicio cerrajero urgente en toda Tenerife Llegamos en menos de 30 minutos
+        </h3>
+        
+        <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+          En Cerrajero Tenerife 24 h urgente ofrecemos cobertura completa en toda la isla. No importa dónde te encuentres: llegamos en menos de 30 minutos, las 24 horas del día, incluso festivos y fines de semana.
+        </p>
+
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          Sabemos que una emergencia no puede esperar. Ya sea una puerta que no abre, una cerradura bloqueada o una llave perdida, enviamos un cerrajero a tu ubicación lo antes posible. Nos movemos rápido, estamos siempre disponibles y trabajamos con total discreción y profesionalidad.
+        </p>
+
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          Si estás en zona norte, sur, este u oeste, nuestro equipo se desplaza rápidamente para atenderte. Solo tienes que llamarnos y en cuestión de minutos uno de nuestros cerrajeros estará en tu puerta.
+        </p>
+
+        <p class="text-gray-600 mb-8 leading-relaxed">
+          Nos comprometemos a ofrecer un servicio rápido, eficaz y sin daños, estés donde estés. Guarda nuestro número y cuenta con nosotros siempre que necesites un cerrajero urgente en Tenerife, de día o de noche.
+        </p>
+
+        <div class="grid grid-cols-2 gap-8 mb-10 border-y border-gray-100 py-8">
+          {stats.map(stat => (
+            <div class="text-center lg:text-left">
+              <span class="block text-4xl font-black text-action mb-1">{stat.number}</span>
+              <span className="text-sm text-gray-500 font-bold uppercase tracking-wide">{stat.label}</span>
+            </div>
+          ))}
+        </div>
+
+        <h4 class="text-2xl font-bold text-gray-900 mb-6">¿Por qué elegirnos?</h4>
+        <div class="grid gap-6">
+          {features.map(feature => (
+            <div class="flex items-start">
+              <span class="flex-shrink-0 bg-blue-50 text-action p-2 rounded-lg mr-4 mt-1">
+                <Icon name="check" size={20} />
+              </span>
+              <div>
+                <h5 class="font-bold text-gray-900 mb-1">{feature.title}</h5>
+                <p class="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Form Side */}
+      <div class="lg:w-1/2 w-full lg:sticky lg:top-24">
+        <ContactForm client:visible />
+        
+        {/* Additional guarantee box below form */}
+        <div class="mt-8 bg-primary rounded-xl p-8 text-white relative overflow-hidden">
+          <div class="absolute right-0 top-0 opacity-10 transform translate-x-1/4 -translate-y-1/4">
+             <Icon name="shield" size={150} />
+          </div>
+          <h4 class="text-xl font-bold mb-3 relative z-10">Nos desplazamos a toda la isla</h4>
+          <p class="text-gray-300 relative z-10 mb-4 text-sm leading-relaxed">
+            Si estás en zona norte, sur, este u oeste, nuestro equipo se desplaza rápidamente para atenderte. 
+            Solo tienes que llamarnos y en cuestión de minutos uno de nuestros cerrajeros estará en tu puerta.
+          </p>
+          <div class="flex items-center text-sm font-semibold text-action relative z-10">
+            <Icon name="shield" size={16} className="mr-2" />
+            Garantía de seguridad y confianza
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

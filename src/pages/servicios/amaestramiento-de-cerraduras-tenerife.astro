@@ -1,0 +1,117 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ContactForm from '../../components/organisms/ContactForm';
+import Icon from '../../components/atoms/Icon';
+---
+
+<Layout title="Amaestramiento de cerraduras Tenerife - Servicio Urgente 24h">
+  <main>
+    <!-- Hero Section -->
+    <section class="relative bg-primary text-white py-20 lg:py-28 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+             <img 
+                src="https://placehold.co/1920x800/080c1b/1a2240?text=Amaestramiento+de+Llaves" 
+                alt="Amaestramiento de cerraduras" 
+                class="w-full h-full object-cover opacity-40 mix-blend-overlay"
+            />
+            <div class="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-primary/90"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10 text-center">
+             <div class="flex justify-center items-center gap-2 text-sm font-medium text-gray-400 mb-6 uppercase tracking-wider animate-fade-in">
+                <a href="/" class="hover:text-action transition-colors">Inicio</a>
+                <span class="text-gray-600">/</span>
+                <span class="text-gray-400">Servicios</span>
+                <span class="text-gray-600">/</span>
+                <span class="text-action">Amaestramiento</span>
+            </div>
+            
+            <h1 class="text-4xl lg:text-5xl font-black mb-6 font-heading tracking-tight animate-fade-in-down">
+                Amaestramiento de cerraduras Tenerife
+            </h1>
+             <p class="text-xl text-gray-300 max-w-3xl mx-auto font-light leading-relaxed mb-10 animate-fade-in-up">
+                ¿Necesitas controlar varias cerraduras con una sola llave? Estamos disponibles ahora mismo. Servicio urgente y rápido en toda Tenerife.
+            </p>
+            
+            <div class="animate-fade-in-up" style="animation-delay: 0.2s">
+                <a href="tel:+34922076289" class="inline-flex items-center bg-action text-white font-bold py-4 px-8 rounded-full shadow-lg hover:bg-opacity-90 transition-transform transform hover:-translate-y-1">
+                    <Icon name="phone" size={24} className="mr-2" />
+                    Llamar ahora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            
+            <!-- Qué es el amaestramiento de cerraduras? -->
+            <div class="flex flex-col md:flex-row gap-12 items-start mb-20">
+                <div class="md:w-1/3">
+                    <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100 text-primary">
+                        <Icon name="key" size={64} className="mb-4 text-action" />
+                        <h2 class="text-2xl font-bold font-heading">¿Qué es el amaestramiento de cerraduras?</h2>
+                    </div>
+                </div>
+                <div class="md:w-2/3 space-y-6 text-lg text-gray-600 leading-relaxed">
+                    <p>
+                        El amaestramiento de cerraduras permite que varias cerraduras funcionen con una única llave. Ideal para negocios, oficinas o comunidades de vecinos.
+                    </p>
+                    <p>
+                        Con este sistema, gestionas accesos de manera más segura y eficiente. No necesitas cargar con muchas llaves ni preocuparte por duplicados innecesarios.
+                    </p>
+                    <p class="font-medium text-gray-800 border-l-4 border-action pl-4">
+                        Nuestro equipo en Tenerife se encarga de planificar y ejecutar el amaestramiento de manera profesional y rápida, sin complicaciones.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Ventajas de contar con un amaestramiento profesional -->
+             <div class="flex flex-col md:flex-row-reverse gap-12 items-start mb-20">
+                <div class="md:w-1/3">
+                     <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 text-primary">
+                        <Icon name="check" size={64} className="mb-4 text-action" />
+                        <h2 class="text-2xl font-bold font-heading">Ventajas de contar con un amaestramiento profesional</h2>
+                    </div>
+                </div>
+                <div class="md:w-2/3 space-y-6 text-lg text-gray-600 leading-relaxed">
+                    <p>
+                        Ahorra tiempo y evita pérdidas de llaves. Tener un sistema de cerraduras amaestradas reduce riesgos de seguridad y facilita el control de accesos.
+                    </p>
+                    <p>
+                        Además, mejora la organización: cada persona tiene acceso solo a las áreas autorizadas. Nuestros cerrajeros en Tenerife garantizan que todo quede perfectamente funcional desde el primer día, evitando fallos futuros.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Servicio urgente y confiable en Tenerife -->
+            <div class="bg-gradient-to-br from-primary to-gray-900 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden mb-20">
+                <div class="absolute top-0 right-0 opacity-10 transform translate-x-1/4 -translate-y-1/4">
+                    <Icon name="shield" size={200} />
+                </div>
+                <div class="relative z-10">
+                    <h2 class="text-3xl font-bold mb-6 font-heading text-action">Servicio urgente y confiable en Tenerife</h2>
+                    <div class="space-y-6 text-lg text-gray-300 leading-relaxed">
+                        <p>
+                            Entendemos que los problemas de seguridad no pueden esperar. Por eso atendemos tu solicitud de amaestramiento de cerraduras de forma inmediata.
+                        </p>
+                        <p>
+                             Trabajamos con materiales de alta calidad y técnicas precisas para asegurar que tus cerraduras funcionen sin problemas. Puedes confiar en nosotros: experiencia, rapidez y atención personalizada en toda Tenerife.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form Section -->
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold text-center mb-8 font-heading text-gray-900">Solicitar Presupuesto</h3>
+                <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
+                    <ContactForm client:visible />
+                </div>
+            </div>
+
+        </div>
+    </section>
+  </main>
+</Layout>

@@ -1,0 +1,41 @@
+---
+import ZoneList from '../molecules/ZoneList';
+
+const zones = {
+  norte: [
+    "Santa Cruz de Tenerife", "San Cristóbal de La Laguna", "Tegueste", "La Orotava", 
+    "Puerto de la Cruz", "Los Realejos", "Icod de los Vinos", "Tacoronte", "El Sauzal", 
+    "La Matanza de Acentejo", "La Victoria de Acentejo", "Santa Úrsula", "Buenavista del Norte", 
+    "Los Silos", "Garachico", "La Guancha", "San Juan de la Rambla", "El Tanque"
+  ],
+  sur: [
+    "Arona", "Los Cristianos", "Playa de las Américas", "Costa del Silencio", "Adeje", 
+    "Costa Adeje", "Callao Salvaje", "Playa Paraíso", "El Médano", "Granadilla de Abona", 
+    "San Isidro", "San Miguel de Abona", "Las Chafiras", "Golf del Sur", "Amarilla Golf", 
+    "Vilaflor de Chasna", "Valle San Lorenzo", "Buzanada", "Guaza", "Parque La Reina"
+  ],
+  esteOeste: [
+    "Candelaria", "Güímar", "Arafo", "Fasnia", "Arico", "Abades", "Porís de Abona", 
+    "Santiago del Teide", "Puerto Santiago", "Los Gigantes", "Tamaimo", "Guía de Isora", 
+    "Alcalá", "Playa San Juan", "Chío", "Tejina de Isora"
+  ]
+};
+---
+
+<section id="zonas" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-heading">Zonas de servicio</h2>
+      <p class="text-xl font-medium text-action mb-2">Cerrajero urgente en toda Tenerife</p>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        ¿Tu localidad no aparece en la lista? No te preocupes, llegamos a cualquier punto de Tenerife, estés donde estés.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <ZoneList title="Zona Norte" zones={zones.norte} />
+      <ZoneList title="Zona Sur" zones={zones.sur} />
+      <ZoneList title="Zona Este/Oeste" zones={zones.esteOeste} />
+    </div>
+  </div>
+</section>
