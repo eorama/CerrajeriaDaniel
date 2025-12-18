@@ -72,9 +72,14 @@ export default function Navbar({ currentPath = '' }: { currentPath?: string }) {
 
     const isActive = (href?: string): boolean => {
         if (!href) return false;
-        if (href === '/' && currentPath === '/') return true;
-        if (href !== '/' && currentPath.startsWith(href)) return true;
-        return false;
+
+        // Exact match check for Home/Base path to avoid it being active on all sub-routes
+        if (href === '/CerrajeriaDaniel/' || href === '/CerrajeriaDaniel') {
+            return currentPath === '/CerrajeriaDaniel/' || currentPath === '/CerrajeriaDaniel';
+        }
+
+        // For other routes, startsWith is acceptable but consider checking for exact segment match if needed
+        return currentPath.startsWith(href);
     };
 
     // Check if any child of a menu item is active (for Services parent state)
