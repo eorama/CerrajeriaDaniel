@@ -1,10 +1,17 @@
 ---
-import '@fontsource/roboto';
-import '@fontsource/montserrat';
-import '../styles/global.css';
-import Navbar from '../components/organisms/Navbar';
-import Footer from '../components/organisms/Footer.astro';
-import StickyCallBar from '../components/organisms/StickyCallBar';
+import "@fontsource/roboto";
+import "@fontsource/montserrat";
+import "../styles/global.css";
+import Navbar from "../components/organisms/Navbar";
+import Footer from "../components/organisms/Footer.astro";
+import StickyCallBar from "../components/organisms/StickyCallBar";
+import CookieConsent from "../components/molecules/CookieConsent";
+
+import { getImage } from "astro:assets";
+import logoImg from "../assets/images/logo.png";
+import menuAperturas from "../assets/images/menu_aperturas.png";
+import menuCerraduras from "../assets/images/menu_cerraduras.png";
+import menuLlaves from "../assets/images/menu_llaves.png";
 
 interface Props {
 	title: string;
@@ -12,23 +19,67 @@ interface Props {
 
 const { title } = Astro.props;
 const currentPath = Astro.url.pathname;
+
+// Optimize images for Navbar
+const optimizedLogo = await getImage({
+	src: logoImg,
+	format: "webp",
+	width: 420,
+	height: 109,
+});
+const optimizedAperturas = await getImage({
+	src: menuAperturas,
+	format: "webp",
+	width: 240,
+	height: 240,
+});
+const optimizedCerraduras = await getImage({
+	src: menuCerraduras,
+	format: "webp",
+	width: 240,
+	height: 240,
+});
+const optimizedLlaves = await getImage({
+	src: menuLlaves,
+	format: "webp",
+	width: 240,
+	height: 240,
+});
+
+const navbarImages = {
+	logo: optimizedLogo.src,
+	aperturas: optimizedAperturas.src,
+	cerraduras: optimizedCerraduras.src,
+	llaves: optimizedLlaves.src,
+};
 ---
 
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Cerrajero Tenerife 24h - Servicio Urgente" />
+		<meta
+			name="description"
+			content="Cerrajero Tenerife 24h - Servicio Urgente"
+		/>
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/x-icon" href="/CerrajeriaDaniel/favicon.ico" />
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="/CerrajeriaDaniel/favicon.ico"
+		/>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
-        <Navbar client:visible currentPath={currentPath} />
-        <slot />
-        <Footer />
-        <StickyCallBar client:visible />
+		<Navbar
+			client:visible
+			currentPath={currentPath}
+			images={navbarImages}
+		/>
+		<slot />
+		<Footer />
+		<StickyCallBar client:visible />
+		<CookieConsent client:idle />
 	</body>
 </html>
-

@@ -2,6 +2,8 @@
 import Icon from '../atoms/Icon';
 
 const currentYear = new Date().getFullYear();
+import { Image } from 'astro:assets';
+import logoImg from '../../assets/images/logo.png';
 ---
 
 <footer class="bg-primary text-gray-300 py-12 border-t-8 border-action">
@@ -10,7 +12,7 @@ const currentYear = new Date().getFullYear();
       
       {/* Contact Column */}
       <div>
-        <img src="/CerrajeriaDaniel/images/logo.png" alt="Cerrajero Tenerife 24h" width="420" height="109" class="h-14 w-auto mb-4 object-contain brightness-0 invert" />
+        <Image src={logoImg} alt="Cerrajero Tenerife 24h" width={420} height={109} class="h-14 w-auto mb-4 object-contain brightness-0 invert" />
         <p class="mb-4">
           En Cerrajería Daniel ofrecemos servicio urgente las 24 horas en Tenerife. 
           Abrimos puertas, cambiamos cerraduras, reparamos bombines y mejoramos la seguridad de tu hogar o negocio con atención inmediata.
@@ -68,7 +70,9 @@ const currentYear = new Date().getFullYear();
           Servicio rápido, profesional y eficaz. Llegamos en menos de 30 minutos a cualquier punto de la isla.
         </p>
         <div class="mt-4">
-            <a href="/CerrajeriaDaniel/politica-de-privacidad" class="text-sm text-gray-400 hover:text-white underline transition-colors">Política de Privacidad</a>
+            <a href="/CerrajeriaDaniel/politica-de-privacidad" class="text-sm text-gray-400 hover:text-white underline transition-colors block mb-2">Política de Privacidad</a>
+            <a href="/CerrajeriaDaniel/politica-de-cookies" class="text-sm text-gray-400 hover:text-white underline transition-colors block mb-2">Política de Cookies</a>
+            <a href="/CerrajeriaDaniel/aviso-legal" class="text-sm text-gray-400 hover:text-white underline transition-colors block">Aviso Legal</a>
         </div>
       </div>
     </div>

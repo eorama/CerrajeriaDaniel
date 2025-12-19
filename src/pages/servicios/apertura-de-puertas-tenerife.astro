@@ -1,120 +1,202 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import ContactForm from '../../components/organisms/ContactForm';
-import Icon from '../../components/atoms/Icon';
+import Layout from "../../layouts/Layout.astro";
+import ContactForm from "../../components/organisms/ContactForm";
+import Icon from "../../components/atoms/Icon";
+import { Image } from "astro:assets";
+import serviceImg from "../../assets/images/service_apertura_puertas.png";
 ---
 
 <Layout title="Apertura de puertas Tenerife - Servicio Urgente 24h">
-  <main>
-    <!-- Hero Section -->
-    <section class="relative bg-primary text-white py-20 lg:py-28 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-             <img 
-                src="https://placehold.co/1920x800/080c1b/1a2240?text=Apertura+de+Puertas" 
-                alt="Apertura de puertas" 
-                class="w-full h-full object-cover opacity-40 mix-blend-overlay"
-            />
-            <div class="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-primary/90"></div>
-        </div>
-        
-        <div class="container mx-auto px-4 relative z-10 text-center">
-            <div class="flex justify-center items-center gap-2 text-sm font-medium text-gray-400 mb-6 uppercase tracking-wider animate-fade-in">
-                <a href="/" class="hover:text-action transition-colors">Inicio</a>
-                <span class="text-gray-600">/</span>
-                <span class="text-gray-400">Servicios</span>
-                <span class="text-gray-600">/</span>
-                <span class="text-action">Apertura de puertas</span>
+    <main>
+        <!-- Hero Section -->
+        <section
+            class="relative bg-primary text-white py-20 lg:py-28 overflow-hidden"
+        >
+            <div class="absolute inset-0 z-0">
+                <Image
+                    src={serviceImg}
+                    alt="Apertura de puertas"
+                    loading="eager"
+                    class="w-full h-full object-cover opacity-40 mix-blend-overlay"
+                />
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/80 to-primary/90"
+                >
+                </div>
             </div>
-            
-            <h1 class="text-4xl lg:text-5xl font-black mb-6 font-heading tracking-tight animate-fade-in-down">
-                Apertura de puertas Tenerife
-            </h1>
-             <p class="text-xl text-gray-300 max-w-3xl mx-auto font-light leading-relaxed mb-10 animate-fade-in-up">
-                ¿Te has quedado fuera de tu casa o negocio? No pierdas tiempo, estamos listos para abrir tu puerta de manera rápida y segura, a cualquier hora del día.
-            </p>
-            
-            <div class="animate-fade-in-up" style="animation-delay: 0.2s">
-                <a href="tel:+34922076289" class="inline-flex items-center bg-action text-white font-bold py-4 px-8 rounded-full shadow-lg hover:bg-opacity-90 transition-transform transform hover:-translate-y-1">
-                    <Icon name="phone" size={24} className="mr-2" />
-                    Llamar ahora
-                </a>
-            </div>
-        </div>
-    </section>
 
-    <!-- Main Content -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4 max-w-5xl">
-            
-            <!-- Servicio urgente 24/7 -->
-            <div class="flex flex-col md:flex-row gap-12 items-start mb-20">
-                <div class="md:w-1/3">
-                    <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100 text-primary">
-                        <Icon name="clock" size={64} className="mb-4 text-action" />
-                        <h2 class="text-2xl font-bold font-heading">Servicio urgente 24/7</h2>
+            <div class="container mx-auto px-4 relative z-10 text-center">
+                <div
+                    class="flex justify-center items-center gap-2 text-sm font-medium text-gray-400 mb-6 uppercase tracking-wider animate-fade-in"
+                >
+                    <a
+                        href="/CerrajeriaDaniel/"
+                        class="hover:text-action transition-colors">Inicio</a
+                    >
+                    <span class="text-gray-600">/</span>
+                    <span class="text-gray-400">Servicios</span>
+                    <span class="text-gray-600">/</span>
+                    <span class="text-action">Apertura de puertas</span>
+                </div>
+
+                <h1
+                    class="text-4xl lg:text-5xl font-black mb-6 font-heading tracking-tight animate-fade-in-down"
+                >
+                    Apertura de puertas Tenerife
+                </h1>
+                <p
+                    class="text-xl text-gray-300 max-w-3xl mx-auto font-light leading-relaxed mb-10 animate-fade-in-up"
+                >
+                    ¿Te has quedado fuera de tu casa o negocio? No pierdas
+                    tiempo, estamos listos para abrir tu puerta de manera rápida
+                    y segura, a cualquier hora del día.
+                </p>
+
+                <div class="animate-fade-in-up" style="animation-delay: 0.2s">
+                    <a
+                        href="tel:+34922076289"
+                        class="inline-flex items-center bg-action text-white font-bold py-4 px-8 rounded-full shadow-lg hover:bg-opacity-90 transition-transform transform hover:-translate-y-1"
+                    >
+                        <Icon name="phone" size={24} className="mr-2" />
+                        Llamar ahora
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <!-- Servicio urgente 24/7 -->
+                <div class="flex flex-col md:flex-row gap-12 items-start mb-20">
+                    <div class="md:w-1/3">
+                        <div
+                            class="bg-blue-50 p-6 rounded-2xl border border-blue-100 text-primary flex flex-col items-center text-center"
+                        >
+                            <Image
+                                src={serviceImg}
+                                alt="Apertura Puertas"
+                                class="w-[200px] h-[300px] object-cover rounded-lg mb-4 shadow-md"
+                            />
+                            <h2 class="text-2xl font-bold font-heading">
+                                Servicio urgente 24/7
+                            </h2>
+                        </div>
                     </div>
-                </div>
-                <div class="md:w-2/3 space-y-6 text-lg text-gray-600 leading-relaxed">
-                    <p>
-                        Cuando se trata de quedarte fuera, cada minuto cuenta. Nuestro equipo llega rápido y con todo lo necesario para abrir tu puerta sin daños. No importa el tipo de cerradura ni la hora, Tenerife puede contar con nosotros.
-                    </p>
-                    <p>
-                        Abrir tu puerta no tiene que ser un problema. Usamos herramientas profesionales que nos permiten trabajar de manera rápida y segura, evitando roturas costosas.
-                    </p>
-                    <p class="font-medium text-gray-800 border-l-4 border-action pl-4">
-                        Tu seguridad es nuestra prioridad. Nos aseguramos de que tu puerta quede como estaba o mejor, protegiendo tu hogar o local desde el primer momento.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Técnicos especializados -->
-             <div class="flex flex-col md:flex-row-reverse gap-12 items-start mb-20">
-                <div class="md:w-1/3">
-                     <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 text-primary">
-                        <Icon name="tools" size={64} className="mb-4 text-action" />
-                        <h2 class="text-2xl font-bold font-heading">Técnicos especializados</h2>
-                    </div>
-                </div>
-                <div class="md:w-2/3 space-y-6 text-lg text-gray-600 leading-relaxed">
-                    <p>
-                        Nuestros cerrajeros están altamente entrenados en todo tipo de cerraduras: tradicionales, modernas o electrónicas. Cada apertura se realiza con precisión y cuidado.
-                    </p>
-                    <p>
-                        Además, ofrecemos asesoramiento para que tu hogar sea más seguro tras la apertura. Si tu cerradura está vieja o dañada, te recomendaremos la mejor solución para evitar futuros problemas.
-                    </p>
-                    <p>
-                         Con años de experiencia en Tenerife, hemos ayudado a cientos de clientes a volver a entrar sin complicaciones y con total tranquilidad.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Garantía de seguridad y rapidez -->
-            <div class="bg-gradient-to-br from-primary to-gray-900 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden mb-20">
-                <div class="absolute top-0 right-0 opacity-10 transform translate-x-1/4 -translate-y-1/4">
-                    <Icon name="shield" size={200} />
-                </div>
-                <div class="relative z-10">
-                    <h2 class="text-3xl font-bold mb-6 font-heading text-action">Garantía de seguridad y rapidez</h2>
-                    <div class="grid md:grid-cols-2 gap-8 text-lg text-gray-300 leading-relaxed">
+                    <div
+                        class="md:w-2/3 space-y-6 text-lg text-gray-600 leading-relaxed"
+                    >
                         <p>
-                            Sabemos que cuando te quedas fuera necesitas una solución inmediata. Por eso garantizamos atención rápida y efectiva.
+                            Cuando se trata de quedarte fuera, cada minuto
+                            cuenta. Nuestro equipo llega rápido y con todo lo
+                            necesario para abrir tu puerta sin daños. No importa
+                            el tipo de cerradura ni la hora, Tenerife puede
+                            contar con nosotros.
                         </p>
                         <p>
-                             Cada apertura se realiza respetando la seguridad de tu propiedad y tus pertenencias. No improvisamos, aplicamos técnicas profesionales que protegen tanto la cerradura como la puerta.
+                            Abrir tu puerta no tiene que ser un problema. Usamos
+                            herramientas profesionales que nos permiten trabajar
+                            de manera rápida y segura, evitando roturas
+                            costosas.
+                        </p>
+                        <p
+                            class="font-medium text-gray-800 border-l-4 border-action pl-4"
+                        >
+                            Tu seguridad es nuestra prioridad. Nos aseguramos de
+                            que tu puerta quede como estaba o mejor, protegiendo
+                            tu hogar o local desde el primer momento.
                         </p>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Contact Form Section -->
-            <div class="max-w-4xl mx-auto">
-                <h3 class="text-2xl font-bold text-center mb-8 font-heading text-gray-900">Solicitar Presupuesto</h3>
-                <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
-                    <ContactForm client:visible />
+
+                <!-- Técnicos especializados -->
+                <div
+                    class="flex flex-col md:flex-row-reverse gap-12 items-start mb-20"
+                >
+                    <div class="md:w-1/3">
+                        <div
+                            class="bg-gray-50 p-6 rounded-2xl border border-gray-100 text-primary"
+                        >
+                            <Icon
+                                name="tools"
+                                size={64}
+                                className="mb-4 text-action"
+                            />
+                            <h2 class="text-2xl font-bold font-heading">
+                                Técnicos especializados
+                            </h2>
+                        </div>
+                    </div>
+                    <div
+                        class="md:w-2/3 space-y-6 text-lg text-gray-600 leading-relaxed"
+                    >
+                        <p>
+                            Nuestros cerrajeros están altamente entrenados en
+                            todo tipo de cerraduras: tradicionales, modernas o
+                            electrónicas. Cada apertura se realiza con precisión
+                            y cuidado.
+                        </p>
+                        <p>
+                            Además, ofrecemos asesoramiento para que tu hogar
+                            sea más seguro tras la apertura. Si tu cerradura
+                            está vieja o dañada, te recomendaremos la mejor
+                            solución para evitar futuros problemas.
+                        </p>
+                        <p>
+                            Con años de experiencia en Tenerife, hemos ayudado a
+                            cientos de clientes a volver a entrar sin
+                            complicaciones y con total tranquilidad.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Garantía de seguridad y rapidez -->
+                <div
+                    class="bg-gradient-to-br from-primary to-gray-900 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden mb-20"
+                >
+                    <div
+                        class="absolute top-0 right-0 opacity-10 transform translate-x-1/4 -translate-y-1/4"
+                    >
+                        <Icon name="shield" size={200} />
+                    </div>
+                    <div class="relative z-10">
+                        <h2
+                            class="text-3xl font-bold mb-6 font-heading text-action"
+                        >
+                            Garantía de seguridad y rapidez
+                        </h2>
+                        <div
+                            class="grid md:grid-cols-2 gap-8 text-lg text-gray-300 leading-relaxed"
+                        >
+                            <p>
+                                Sabemos que cuando te quedas fuera necesitas una
+                                solución inmediata. Por eso garantizamos
+                                atención rápida y efectiva.
+                            </p>
+                            <p>
+                                Cada apertura se realiza respetando la seguridad
+                                de tu propiedad y tus pertenencias. No
+                                improvisamos, aplicamos técnicas profesionales
+                                que protegen tanto la cerradura como la puerta.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Section -->
+                <div class="max-w-4xl mx-auto">
+                    <h3
+                        class="text-2xl font-bold text-center mb-8 font-heading text-gray-900"
+                    >
+                        Solicitar Presupuesto
+                    </h3>
+                    <div
+                        class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden"
+                    >
+                        <ContactForm client:visible />
+                    </div>
                 </div>
             </div>
-
-        </div>
-    </section>
-  </main>
+        </section>
+    </main>
 </Layout>

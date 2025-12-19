@@ -7,6 +7,14 @@ interface MenuItem {
     href?: string;
     children?: MenuItem[];
     noLink?: boolean;
+    imageKey?: keyof NavbarImages;
+}
+
+export interface NavbarImages {
+    logo: string;
+    aperturas: string;
+    cerraduras: string;
+    llaves: string;
 }
 
 const navStructure: MenuItem[] = [
@@ -18,8 +26,7 @@ const navStructure: MenuItem[] = [
         children: [
             {
                 name: 'Aperturas',
-                // Placeholder image for Aperturas
-                href: 'https://placehold.co/120x120/0c132e/dcac00?text=Aperturas',
+                imageKey: 'aperturas',
                 children: [
                     { name: 'Apertura de puertas', href: '/CerrajeriaDaniel/servicios/apertura-de-puertas-tenerife' },
                     { name: 'Apertura de coches', href: '/CerrajeriaDaniel/servicios/apertura-de-coches-tenerife' },
@@ -29,8 +36,7 @@ const navStructure: MenuItem[] = [
             },
             {
                 name: 'Cerraduras',
-                // Placeholder image for Cerraduras
-                href: 'https://placehold.co/120x120/0c132e/dcac00?text=Cerraduras',
+                imageKey: 'cerraduras',
                 children: [
                     { name: 'Cambio y reparación de cerraduras', href: '/CerrajeriaDaniel/servicios/cambio-y-reparacion-de-cerraduras-tenerife' },
                     { name: 'Reparación de cerraduras electrónicas', href: '/CerrajeriaDaniel/servicios/reparacion-de-cerraduras-electronicas-tenerife' },
@@ -39,8 +45,7 @@ const navStructure: MenuItem[] = [
             },
             {
                 name: 'Llaves y Mandos',
-                // Placeholder image for Llaves
-                href: 'https://placehold.co/120x120/0c132e/dcac00?text=Llaves',
+                imageKey: 'llaves',
                 children: [
                     { name: 'Duplicado de llaves', href: '/CerrajeriaDaniel/servicios/duplicado-de-llaves-tenerife' },
                     { name: 'Copia de llaves de coche', href: '/CerrajeriaDaniel/servicios/copia-de-llaves-de-coche-tenerife' },
@@ -54,7 +59,7 @@ const navStructure: MenuItem[] = [
     { name: 'Contacto', href: '/CerrajeriaDaniel/contacto' },
 ];
 
-export default function Navbar({ currentPath = '' }: { currentPath?: string }) {
+export default function Navbar({ currentPath = '', images }: { currentPath?: string, images: NavbarImages }) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
     const megaMenuTimer = useRef<NodeJS.Timeout | null>(null);
@@ -83,7 +88,6 @@ export default function Navbar({ currentPath = '' }: { currentPath?: string }) {
     };
 
     // Check if any child of a menu item is active (for Services parent state)
-    // Check if any child of a menu item is active (for Services parent state)
     const isParentActive = (item: MenuItem): boolean => {
         if (item.children) {
             return item.children.some(child =>
@@ -99,7 +103,7 @@ export default function Navbar({ currentPath = '' }: { currentPath?: string }) {
                 <div className="flex justify-between h-20 items-center">
                     <div className="flex-shrink-0 flex items-center">
                         <a href="/CerrajeriaDaniel/" className="hover:opacity-90 transition-opacity" aria-label="Ir al inicio">
-                            <img src="/CerrajeriaDaniel/images/logo.png" alt="Cerrajero Tenerife 24h" width="420" height="109" className="h-14 w-auto object-contain" />
+                            <img src={images.logo} alt="Cerrajero Tenerife 24h" width="420" height="109" className="h-14 w-auto object-contain" />
                         </a>
                     </div>
 
@@ -136,15 +140,18 @@ export default function Navbar({ currentPath = '' }: { currentPath?: string }) {
                                                                 {category.name}
                                                             </h3>
                                                             <div className="flex items-start gap-4">
-                                                                {/* Image on Left (using placeholder stored in href property for convenience in this struct) */}
+                                                                {/* Image on Left */}
                                                                 <div className="flex-shrink-0 w-24 h-24 rounded-lg overflow-hidden shadow-sm border border-gray-100">
-                                                                    <img
-                                                                        src={category.href}
-                                                                        alt=""
-                                                                        width="120"
-                                                                        height="120"
-                                                                        className="w-full h-full object-cover"
-                                                                    />
+                                                                    {category.imageKey && (
+                                                                        <img
+                                                                            src={images[category.imageKey]}
+                                                                            alt=""
+                                                                            width="120"
+                                                                            height="120"
+                                                                            loading="eager"
+                                                                            className="w-full h-full object-cover"
+                                                                        />
+                                                                    )}
                                                                 </div>
                                                                 {/* Links on Right */}
                                                                 <ul className="space-y-2 flex-grow">

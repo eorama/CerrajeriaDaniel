@@ -72,7 +72,7 @@ export default function ContactForm() {
 
                 {/* Categoría de Servicio (Radio Buttons) */}
                 <div>
-                    <label className="block text-sm font-bold text-gray-700 mb-3">¿Qué tipo de servicio necesitas?</label>
+                    <span className="block text-sm font-bold text-gray-700 mb-3">¿Qué tipo de servicio necesitas?</span>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                         {(Object.keys(serviceCategories) as Category[]).map((category) => (
                             <label
@@ -182,7 +182,7 @@ export default function ContactForm() {
                     </div>
                     <div className="ml-3 text-sm">
                         <label htmlFor="privacidad" className="font-medium text-gray-600 cursor-pointer">
-                            He leído y acepto la <a href="#" className="text-action hover:underline">política de privacidad</a>.
+                            He leído y acepto la <a href="/CerrajeriaDaniel/politica-de-privacidad" className="text-action hover:underline">política de privacidad</a>.
                         </label>
                     </div>
                 </div>
